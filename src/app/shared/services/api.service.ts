@@ -15,4 +15,8 @@ export class ApiService {
   getAllPost(): Observable<any> {
     return this._http.get<any>('https://jsonplaceholder.typicode.com/posts')
   }
+
+  getSinglePost(id: number){
+    return this._http.get<any>('https://jsonplaceholder.typicode.com/posts/' + id)
+  }
 }
